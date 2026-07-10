@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechHub Pricing — transparent, flexible plans for every business size." />
+  <title>Pricing — TechHub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="logo"><div class="logo-icon">⚡</div>Tech<span>Hub</span></a>
+    <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="blog.html">Blog</a></li><li><a href="team.html">Team</a></li><li><a href="pricing.html" class="active">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-ghost btn-sm">Log In</a><a href="pricing.html" class="btn btn-primary btn-sm">Get Started</a></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<nav class="mobile-nav"><a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="blog.html">Blog</a><a href="team.html">Team</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></nav>
+
+<main class="page-wrapper">
+  <div class="page-hero" style="text-align:center;">
+    <div class="container">
+      <div class="breadcrumb" style="justify-content:center;"><a href="../index.html">Home</a> <span>/</span> <span>Pricing</span></div>
+      <div class="section-label" style="justify-content:center;">Transparent Pricing</div>
+      <h1 class="page-hero-title">Simple Plans,<br>No <span>Hidden Fees</span></h1>
+      <p class="page-hero-sub" style="margin:0 auto;">Choose the plan that fits your business. All plans include a 14-day free trial — no credit card required.</p>
+    </div>
+  </div>
+
+  <!-- Toggle -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex;justify-content:center;margin-bottom:3rem;">
+        <div style="display:flex;align-items:center;gap:1rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:100px;padding:.5rem 1.25rem;">
+          <span id="monthlyLabel" style="font-size:.875rem;font-weight:600;color:var(--clr-white);">Monthly</span>
+          <button id="billingToggle" onclick="toggleBilling()" aria-label="Toggle billing period" style="width:48px;height:26px;border-radius:100px;background:var(--clr-accent2);border:none;cursor:pointer;position:relative;transition:background .3s;"><span id="toggleKnob" style="position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .3s;display:block;"></span></button>
+          <span id="annualLabel" style="font-size:.875rem;font-weight:600;color:var(--clr-muted);">Annual <span class="badge badge-green" style="margin-left:.25rem;">Save 20%</span></span>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto;" class="reveal">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div style="margin-bottom:1.5rem;">
+            <span class="badge badge-cyan" style="margin-bottom:.75rem;">Starter</span>
+            <div class="price-amount"><sup>₨</sup><span class="price-val" data-monthly="13,900" data-annual="11,100">13,900</span></div>
+            <div class="price-period">per month, billed <span class="billing-period">monthly</span></div>
+          </div>
+          <p style="font-size:.875rem;color:var(--clr-muted);margin-bottom:1.5rem;">Perfect for startups and small teams getting started with smart technology.</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Up to 5 users</li>
+            <li><span class="check">✓</span> 50GB cloud storage</li>
+            <li><span class="check">✓</span> 2 product integrations</li>
+            <li><span class="check">✓</span> Basic analytics dashboard</li>
+            <li><span class="check">✓</span> Email support</li>
+            <li><span class="cross">✗</span> AI features</li>
+            <li><span class="cross">✗</span> Custom integrations</li>
+            <li><span class="cross">✗</span> Dedicated account manager</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost" style="width:100%;justify-content:center;">Start Free Trial</a>
+        </div>
+
+        <!-- Growth (featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div style="margin-bottom:1.5rem;">
+            <span class="badge badge-purple" style="margin-bottom:.75rem;">Growth</span>
+            <div class="price-amount"><sup>₨</sup><span class="price-val" data-monthly="41,900" data-annual="33,500">41,900</span></div>
+            <div class="price-period">per month, billed <span class="billing-period">monthly</span></div>
+          </div>
+          <p style="font-size:.875rem;color:var(--clr-muted);margin-bottom:1.5rem;">Ideal for growing businesses that need more power and automation.</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Up to 25 users</li>
+            <li><span class="check">✓</span> 500GB cloud storage</li>
+            <li><span class="check">✓</span> Unlimited integrations</li>
+            <li><span class="check">✓</span> Advanced analytics &amp; AI insights</li>
+            <li><span class="check">✓</span> Priority email &amp; chat support</li>
+            <li><span class="check">✓</span> AI features included</li>
+            <li><span class="check">✓</span> Custom workflows</li>
+            <li><span class="cross">✗</span> Dedicated account manager</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start Free Trial</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div style="margin-bottom:1.5rem;">
+            <span class="badge badge-amber" style="margin-bottom:.75rem;">Enterprise</span>
+            <div class="price-amount" style="font-size:2rem;">Custom</div>
+            <div class="price-period">tailored to your organisation</div>
+          </div>
+          <p style="font-size:.875rem;color:var(--clr-muted);margin-bottom:1.5rem;">For large organisations requiring bespoke solutions, SLAs, and full support.</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Unlimited users</li>
+            <li><span class="check">✓</span> Unlimited storage</li>
+            <li><span class="check">✓</span> All integrations + custom API</li>
+            <li><span class="check">✓</span> Full AI &amp; ML suite</li>
+            <li><span class="check">✓</span> 24/7 phone &amp; dedicated support</li>
+            <li><span class="check">✓</span> All AI features</li>
+            <li><span class="check">✓</span> Custom SLA (99.99% uptime)</li>
+            <li><span class="check">✓</span> Dedicated account manager</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost" style="width:100%;justify-content:center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table -->
+  <section class="section" style="background:var(--clr-surface);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border);">
+    <div class="container">
+      <div class="text-center mb-6 reveal"><div class="section-label">Compare Plans</div><h2 class="section-title">Full Feature <span>Comparison</span></h2></div>
+      <div style="overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--clr-border);" class="reveal">
+        <table style="width:100%;border-collapse:collapse;font-size:.875rem;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--clr-border);">
+              <th style="padding:1rem 1.5rem;text-align:left;color:var(--clr-muted);font-weight:600;background:var(--clr-card);">Feature</th>
+              <th style="padding:1rem 1.5rem;text-align:center;color:var(--clr-text);font-weight:700;background:var(--clr-card);">Starter</th>
+              <th style="padding:1rem 1.5rem;text-align:center;color:var(--clr-accent);font-weight:700;background:rgba(0,212,255,.04);">Growth</th>
+              <th style="padding:1rem 1.5rem;text-align:center;color:var(--clr-text);font-weight:700;background:var(--clr-card);">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--clr-border);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Users</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">5</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);background:rgba(0,212,255,.02);">25</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">Unlimited</td></tr>
+            <tr style="border-bottom:1px solid var(--clr-border);background:rgba(255,255,255,.01);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Storage</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">50 GB</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);background:rgba(0,212,255,.02);">500 GB</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">Unlimited</td></tr>
+            <tr style="border-bottom:1px solid var(--clr-border);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">AI Analytics</td><td style="padding:.875rem 1.5rem;text-align:center;color:#f87171;">✗</td><td style="padding:.875rem 1.5rem;text-align:center;color:#34d399;background:rgba(0,212,255,.02);">✓</td><td style="padding:.875rem 1.5rem;text-align:center;color:#34d399;">✓</td></tr>
+            <tr style="border-bottom:1px solid var(--clr-border);background:rgba(255,255,255,.01);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Custom Integrations</td><td style="padding:.875rem 1.5rem;text-align:center;color:#f87171;">✗</td><td style="padding:.875rem 1.5rem;text-align:center;color:#34d399;background:rgba(0,212,255,.02);">✓</td><td style="padding:.875rem 1.5rem;text-align:center;color:#34d399;">✓</td></tr>
+            <tr style="border-bottom:1px solid var(--clr-border);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Support Level</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">Email</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);background:rgba(0,212,255,.02);">Priority Chat</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">24/7 Dedicated</td></tr>
+            <tr style="border-bottom:1px solid var(--clr-border);background:rgba(255,255,255,.01);"><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Uptime SLA</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">99.5%</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);background:rgba(0,212,255,.02);">99.9%</td><td style="padding:.875rem 1.5rem;text-align:center;color:var(--clr-muted);">99.99%</td></tr>
+            <tr><td style="padding:.875rem 1.5rem;color:var(--clr-text);">Dedicated Account Manager</td><td style="padding:.875rem 1.5rem;text-align:center;color:#f87171;">✗</td><td style="padding:.875rem 1.5rem;text-align:center;color:#f87171;background:rgba(0,212,255,.02);">✗</td><td style="padding:.875rem 1.5rem;text-align:center;color:#34d399;">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container-sm">
+      <div class="text-center mb-6 reveal"><div class="section-label">FAQs</div><h2 class="section-title">Pricing <span>Questions</span></h2></div>
+      <div class="faq-item reveal"><button class="faq-question">Can I change my plan at any time? <span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, you can upgrade or downgrade your plan at any time from your account dashboard. Upgrades take effect immediately; downgrades apply at the next billing cycle.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Is there a free trial? <span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">All plans include a 14-day free trial with no credit card required. You'll have full access to all features of your chosen plan during the trial period.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What payment methods do you accept? <span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">We accept all major credit and debit cards (Visa, Mastercard, Amex), as well as bank transfers for annual enterprise plans. All payments are processed securely via Stripe.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Are there any setup fees? <span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">No setup fees for Starter and Growth plans. Enterprise plans may include an onboarding fee depending on the level of customisation required — this will be clearly scoped and quoted upfront.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Do you offer non-profit or educational discounts? <span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We offer 30% discounts for registered non-profits, charities, and educational institutions. Contact our sales team with your organisation's registration documents to apply.</div></div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:var(--clr-surface);border-top:1px solid var(--clr-border);text-align:center;">
+    <div class="container-sm reveal">
+      <h2 class="section-title">Not Sure Which Plan<br>Is Right for <span>You?</span></h2>
+      <p class="section-body" style="margin:0 auto 2rem;">Talk to our team. We'll walk you through the options and help you choose the plan that best fits your goals and budget.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Talk to Sales</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-icon">⚡</div>Tech<span>Hub</span></a><p>Empowering businesses with intelligent technology solutions.</p><div class="social-links"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">in</a><a href="#" class="social-link">⌥</a><a href="#" class="social-link">▶</a></div></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Cloud Solutions</a></li><li><a href="services.html">AI & ML</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Web Dev</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Help Centre</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2025 TechHub Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div></div></footer>
+<button id="backToTop" aria-label="Back to top" style="position:fixed;bottom:2rem;left:2rem;width:44px;height:44px;border-radius:50%;background:var(--clr-accent2);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;opacity:0;transition:opacity .3s;z-index:900;">↑</button>
+<script src="../js/main.js"></script>
+<script>
+let isAnnual = false;
+function toggleBilling() {
+  isAnnual = !isAnnual;
+  const knob = document.getElementById('toggleKnob');
+  const monthly = document.getElementById('monthlyLabel');
+  const annual = document.getElementById('annualLabel');
+  knob.style.transform = isAnnual ? 'translateX(22px)' : 'translateX(0)';
+  monthly.style.color = isAnnual ? 'var(--clr-muted)' : 'var(--clr-white)';
+  annual.style.color = isAnnual ? 'var(--clr-white)' : 'var(--clr-muted)';
+  document.querySelectorAll('.price-val').forEach(el => {
+    el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
+  });
+  document.querySelectorAll('.billing-period').forEach(el => {
+    el.textContent = isAnnual ? 'annually' : 'monthly';
+  });
+}
+</script>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechHub Blog — insights, tutorials, and news on technology, AI, cloud, and security." />
+  <title>Blog — TechHub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="logo"><div class="logo-icon">⚡</div>Tech<span>Hub</span></a>
+    <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="team.html">Team</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-ghost btn-sm">Log In</a><a href="pricing.html" class="btn btn-primary btn-sm">Get Started</a></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<nav class="mobile-nav"><a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="blog.html">Blog</a><a href="team.html">Team</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></nav>
+
+<main class="page-wrapper">
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Blog</span></div>
+      <div class="section-label">Insights & Ideas</div>
+      <h1 class="page-hero-title">The TechHub <span>Blog</span></h1>
+      <p class="page-hero-sub">Expert perspectives on cloud, AI, security, and the future of technology — written by our engineers for yours.</p>
+      <div class="search-bar mt-3" style="margin-top:1.5rem;max-width:400px;">
+        <span class="search-icon">🔍</span>
+        <input type="search" placeholder="Search articles…" aria-label="Search blog articles" />
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- Category filters -->
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;" class="reveal">
+        <button class="btn btn-primary btn-sm" onclick="filterBlog(this,'all')">All</button>
+        <button class="btn btn-ghost btn-sm" onclick="filterBlog(this,'ai')">AI & ML</button>
+        <button class="btn btn-ghost btn-sm" onclick="filterBlog(this,'cloud')">Cloud</button>
+        <button class="btn btn-ghost btn-sm" onclick="filterBlog(this,'security')">Security</button>
+        <button class="btn btn-ghost btn-sm" onclick="filterBlog(this,'dev')">Development</button>
+      </div>
+
+      <!-- Featured post -->
+      <div class="card reveal mb-6" style="display:grid;grid-template-columns:1fr 1fr;margin-bottom:2.5rem;overflow:hidden;">
+        <div style="height:300px;background:linear-gradient(135deg,rgba(0,212,255,.2),rgba(124,58,237,.2));display:flex;align-items:center;justify-content:center;font-size:5rem;">🧠</div>
+        <div style="padding:2.5rem;">
+          <div class="blog-meta"><span class="badge badge-cyan">AI & ML</span><span class="blog-date">15 Nov 2025</span></div>
+          <h2 class="blog-title" style="font-size:1.4rem;margin-bottom:.75rem;">The Rise of Agentic AI: How Autonomous Agents Are Reshaping Enterprise Workflows</h2>
+          <p class="blog-excerpt" style="margin-bottom:1.5rem;">AI agents that can plan, reason, and act are moving from research labs into production deployments. We explore what this means for business operations and how to prepare your organisation for the agentic era.</p>
+          <div style="display:flex;align-items:center;gap:1rem;"><div class="author-avatar" style="width:36px;height:36px;font-size:.875rem;">👨</div><div><div style="font-size:.82rem;font-weight:600;color:var(--clr-white);">Dr. James Park</div><div style="font-size:.75rem;color:var(--clr-muted);">Head of AI Research</div></div><a href="#" class="read-more" style="margin-left:auto;">Read Article →</a></div>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="grid-3" id="blogGrid">
+        <article class="blog-card reveal delay-1" data-category="cloud">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(0,153,187,.15));">☁️</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-cyan">Cloud</span><span class="blog-date">8 Nov 2025</span></div>
+            <h3 class="blog-title">Kubernetes Cost Optimisation: 7 Strategies That Actually Work</h3>
+            <p class="blog-excerpt">Kubernetes clusters can quickly become expensive if left unmanaged. Here are the seven most impactful strategies our engineers use to cut costs without sacrificing reliability.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal delay-2" data-category="security">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(5,150,105,.15));">🔒</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-green">Security</span><span class="blog-date">2 Nov 2025</span></div>
+            <h3 class="blog-title">Zero Trust Security: A Practical Implementation Guide for 2025</h3>
+            <p class="blog-excerpt">Zero Trust isn't a product you buy — it's an architecture you build. We walk through a pragmatic, phased approach to implementing Zero Trust in a real enterprise environment.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal delay-3" data-category="ai">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(99,102,241,.15));">🤖</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-purple">AI & ML</span><span class="blog-date">28 Oct 2025</span></div>
+            <h3 class="blog-title">Fine-Tuning LLMs on Proprietary Data: What We Learned From 50 Projects</h3>
+            <p class="blog-excerpt">After helping 50 organisations fine-tune large language models on their internal data, we've distilled the key lessons — including the mistakes almost everyone makes on their first attempt.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal delay-1" data-category="dev">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(239,68,68,.15),rgba(220,38,38,.15));">🌐</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-red">Development</span><span class="blog-date">20 Oct 2025</span></div>
+            <h3 class="blog-title">Next.js 15 App Router: Everything You Need to Know</h3>
+            <p class="blog-excerpt">Next.js 15 brings significant improvements to the App Router, Server Components, and caching behaviour. Our senior engineers break down every change and what it means for your projects.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal delay-2" data-category="cloud">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(217,119,6,.15));">📊</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-amber">Cloud</span><span class="blog-date">14 Oct 2025</span></div>
+            <h3 class="blog-title">AWS vs Azure vs GCP in 2025: An Honest Comparison</h3>
+            <p class="blog-excerpt">The cloud war rages on. We've run workloads on all three major clouds and here's our honest assessment of cost, performance, developer experience, and ecosystem maturity in 2025.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card reveal delay-3" data-category="ai">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(79,70,229,.15));">📈</div>
+          <div style="padding:1.5rem;">
+            <div class="blog-meta"><span class="badge badge-purple">AI & ML</span><span class="blog-date">7 Oct 2025</span></div>
+            <h3 class="blog-title">Building a Production RAG System: Architecture, Pitfalls, and Lessons</h3>
+            <p class="blog-excerpt">Retrieval-Augmented Generation sounds straightforward in demos. Production is a different story. Here's the full architecture we use for enterprise RAG deployments that actually scale.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More -->
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <button class="btn btn-ghost" onclick="this.textContent='No more articles to load';">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <div class="newsletter-strip"><div class="container"><div class="newsletter-inner"><div class="newsletter-text"><h3>Never Miss an Article</h3><p>Get the latest TechHub insights delivered straight to your inbox every week.</p></div><form class="newsletter-form" novalidate><input type="email" placeholder="Enter your email address" aria-label="Email address" /><button type="submit" class="btn btn-primary">Subscribe</button></form></div></div></div>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-icon">⚡</div>Tech<span>Hub</span></a><p>Empowering businesses with intelligent technology solutions.</p><div class="social-links"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">in</a><a href="#" class="social-link">⌥</a><a href="#" class="social-link">▶</a></div></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Cloud Solutions</a></li><li><a href="services.html">AI & ML</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Web Dev</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Help Centre</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2025 TechHub Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div></div></footer>
+<button id="backToTop" aria-label="Back to top" style="position:fixed;bottom:2rem;left:2rem;width:44px;height:44px;border-radius:50%;background:var(--clr-accent2);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;opacity:0;transition:opacity .3s;z-index:900;">↑</button>
+<script src="../js/main.js"></script>
+<script>
+function filterBlog(btn, category) {
+  document.querySelectorAll('[onclick^="filterBlog"]').forEach(b => { b.className = 'btn btn-ghost btn-sm'; });
+  btn.className = 'btn btn-primary btn-sm';
+  document.querySelectorAll('#blogGrid article').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+  });
+}
+</script>
+</body></html>
